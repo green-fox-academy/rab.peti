@@ -21,8 +21,7 @@ int main() {
     std::cout << elsoSzam+masodikSzam << std::endl;
     std::cout << elsoSzam-masodikSzam << std::endl;
     std::cout << elsoSzam*masodikSzam << std::endl;
-    float elsoSzamFloat = elsoSzam;
-    std::cout << elsoSzamFloat/masodikSzam << std::endl;
+    std::cout << (float)elsoSzam/masodikSzam << std::endl;
     std::cout << elsoSzam/masodikSzam << std::endl;
     std::cout << masodikSzam%elsoSzam << std::endl;
 
