@@ -7,7 +7,6 @@ int main() {
     // Hello, Esther!
     // Hello, Mary!
     // Hello, Joe!
-
     std::cout << "Hello, Johny!" << std::endl;
     std::cout << "Hello, Marci!" << std::endl;
     std::cout << "Hello, Roland!" << std::endl;
