@@ -15,6 +15,5 @@ int main() {
     std::cout << "Peter Rab" << std::endl;
     std::cout << 21 << std::endl;
     std::cout << 2.05 << std::endl;
-
     return 0;
 }
