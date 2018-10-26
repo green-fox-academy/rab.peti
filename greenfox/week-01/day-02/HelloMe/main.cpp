@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Hello, Me!" << std::endl;
+    // Modify this program to greet you instead of the World!
+    std::cout << "Hello Peti!" << std::endl;
     return 0;
 }
