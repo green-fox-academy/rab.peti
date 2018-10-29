@@ -13,7 +13,7 @@ int main() {
     {
         substitute[i] = aj[i];
     }
-    
+
     for (int j = (sizeof(aj) / sizeof(aj[0])) - 1; j >= 0; --j)
     {
         aj[j] = substitute[j];
