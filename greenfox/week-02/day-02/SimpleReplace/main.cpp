@@ -7,7 +7,7 @@ int main() {
     // Expected output: In a galaxy far far away
     //std::string example("In a dishwasher far far away");
     //example.replace("dishwasher", "galaxy");
-    
+
     std::string example("In a dishwasher far far away");
     std::string from = "dishwasher";
 
