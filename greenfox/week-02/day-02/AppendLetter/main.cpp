@@ -8,8 +8,8 @@ std::vector<std::string> appendA(const std::vector<std::string>& animals)
     for (int i = 0; i < animals.size(); ++i)
     {
             temp[i] += "a";
-            std::cout << temp[i] << "  ";
     }
+    return temp;
 }
 
 int main() {
