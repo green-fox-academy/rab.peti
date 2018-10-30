@@ -3,7 +3,7 @@
 std::string reverse(const std::string& text)
 {
     int size = text.length();
-    std::string temp = text;
+    std::string temp(text);
     char swap;
     for (int i = 0; i < (size/2)+1; ++i)
     {
