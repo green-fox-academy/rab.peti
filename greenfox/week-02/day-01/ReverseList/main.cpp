@@ -17,7 +17,7 @@ int main() {
     for (int j = (sizeof(aj) / sizeof(aj[0])) - 1; j >= 0; --j)
     {
         aj[j] = substitute[j];
-        std::cout << aj[j] << std::endl;
+        std::cout << aj[j] << " ";
     }
 
 
