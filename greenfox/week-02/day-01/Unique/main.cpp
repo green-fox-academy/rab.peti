@@ -1,14 +1,19 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 
-void unique(int numbers[], int size)
-{
-    int substituteNumbers[size];
-    int result[size];
-    for (int i = 0; i < size; ++i)
-    {
-        substituteNumbers[i] = numbers[i];
-        std::cout << substituteNumbers[i] << " ";
+void unique(int numbers[], int size) {
+    std::vector<int> result;
+    for (int i = 0; i < size; ++i) {
+        if ((std::find(result.begin(), result.end(), numbers[i])) != result.end()) {
+
+        } else {
+            result.push_back(numbers[i]);
+        }
+    }
+    for (int j = 0; j < result.size(); ++j) {
+        std::cout << result[j] << " ";
     }
     std::cout << "\n";
 }
@@ -24,7 +29,7 @@ int main() {
     int size = sizeof(numbers) / sizeof(numbers[0]);
 
 
-    unique(numbers,size);
+    unique(numbers, size);
 
 
     //std::string name = "RabPeter";
