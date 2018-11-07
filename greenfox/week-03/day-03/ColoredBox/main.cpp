@@ -28,9 +28,21 @@ void draw()
     SDL_SetRenderDrawColor(gRenderer, 0xFF, 0x00, 0x00, 0xFF);
     //create a rectangle
     int size = 100;
-    SDL_Rect fillRect = { SCREEN_WIDTH/2- (size/2), SCREEN_HEIGHT/2-(size/2), size, size};
-    //draw rectangle
-    SDL_RenderFillRect( gRenderer, &fillRect );
+    SDL_SetRenderDrawColor(gRenderer, 0xFF /*R*/, 0x00 /*G*/, 0x00 /*B*/, 0xFF /*A*/);
+    //draw line
+    SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH/2 - (size/2), 0, SCREEN_WIDTH/2-(size/2), SCREEN_HEIGHT);
+
+    SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0xFF /*G*/, 0x00 /*B*/, 0xFF /*A*/);
+    //draw line
+    SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH/2 + (size/2), 0, SCREEN_WIDTH/2+(size/2), SCREEN_HEIGHT);
+
+    SDL_SetRenderDrawColor(gRenderer, 0xFF /*R*/, 0x00 /*G*/, 0xFF /*B*/, 0xFF /*A*/);
+    //draw line
+    SDL_RenderDrawLine(gRenderer, 0, SCREEN_HEIGHT/2 - (size/2), SCREEN_WIDTH, SCREEN_HEIGHT/2 - (size/2));
+
+    SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0x00 /*G*/, 0xFF /*B*/, 0xFF /*A*/);
+    //draw line
+    SDL_RenderDrawLine(gRenderer, 0, SCREEN_HEIGHT/2 + (size/2), SCREEN_WIDTH, SCREEN_HEIGHT/2 + (size/2));
 }
 
 bool init()
