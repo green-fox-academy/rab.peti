@@ -26,11 +26,11 @@ SDL_Renderer* gRenderer = nullptr;
 
 void draw()
 {
-    int x = 10;
-    int y = 10;
+    int x = 50;
+    int y = 50;
     for (int i = 1; i < 5; ++i) {
         //choose color
-        SDL_SetRenderDrawColor(gRenderer, 0xFF, 0x00, 0x00, 0xFF);
+        SDL_SetRenderDrawColor(gRenderer, i*x, i*x, 0x00, 0xFF);
         //create a rectangle
         SDL_Rect fillRect = { i*x, i*y, x, y};
         //draw rectangle
