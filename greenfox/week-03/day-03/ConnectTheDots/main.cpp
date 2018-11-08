@@ -34,23 +34,6 @@ void draw(std::vector<std::pair<int , int>> coordinates)
             SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0x00 /*G*/, 0x00 /*B*/, 0xFF /*A*/);
             SDL_RenderDrawLine(gRenderer, coordinates[i].first, coordinates[i].second, coordinates[i+1].first, coordinates[i+1].second);
     }
-
-    //  SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0x00 /*G*/, 0x00 /*B*/, 0xFF /*A*/);
-    //  //draw line
-    //  SDL_RenderDrawLine(gRenderer, 10, 10, 290, 10);
-    //
-    //  SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0x00 /*G*/, 0x00 /*B*/, 0xFF /*A*/);
-    //  //draw line
-    //  SDL_RenderDrawLine(gRenderer, 290, 10, 290, 290);
-    //
-    //  SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0x00 /*G*/, 0x00 /*B*/, 0xFF /*A*/);
-    //  //draw line
-    //  SDL_RenderDrawLine(gRenderer, 290, 290, 10, 290);
-    //
-    //  SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0x00 /*G*/, 0x00 /*B*/, 0xFF /*A*/);
-    //  //draw line
-    //  SDL_RenderDrawLine(gRenderer, 10, 290, 10, 10);
-    //int array1[2][4] = {{10,290,290,10},{10,10,290,290}};
 }
 
 bool init()
@@ -125,8 +108,6 @@ int main( int argc, char* args[] )
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(gRenderer);
 
-        // Connect these to get a box: {{10, 10}, {290,  10}, {290, 290}, {10, 290}}
-        // Connect these: {{50, 100}, {70, 70}, {80, 90}, {90, 90}, {100, 70}, {120, 100}, {85, 130}, {50, 100}}
         std::vector<std::pair<int , int>> coordinates = {{10, 10}, {290,  10}, {290, 290}, {10, 290},{10, 10}};
 
         std::vector<std::pair<int , int>> fox = {{50, 100}, {70, 70}, {80, 90}, {90, 90}, {100, 70}, {120, 100}, {85, 130}, {50, 100}};
