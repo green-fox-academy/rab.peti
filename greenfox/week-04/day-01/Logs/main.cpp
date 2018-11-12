@@ -56,6 +56,7 @@ std::vector<std::string> uniqueIPAdresses(std::string fileName)
         return uniqueIPaddresses;
     }
     else std::cout << "Can't open file" << std::endl;
+    myFile.close();
 }
 float getPostRatio(std::string fileName)
 {
@@ -84,4 +85,5 @@ float getPostRatio(std::string fileName)
         return getCounter/postCounter;
     }
     else std::cout << "Can't open file" << std::endl;
+    myFile.close();
 }
