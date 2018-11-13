@@ -3,11 +3,6 @@
 
 #include <iostream>
 
-// an authorName
-// a title
-// a text
-// a publicationDate
-
 class BlogPost {
 public:
     BlogPost();
