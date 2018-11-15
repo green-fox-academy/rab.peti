@@ -11,8 +11,8 @@ int main() {
 
 int countDown(int n)
 {
-    std::cout << n << std::endl;
-    if(n > 0) {
+    if(n >= 0) {
+        std::cout << n << std::endl;
         return countDown(n - 1);
     }
     return 0;
