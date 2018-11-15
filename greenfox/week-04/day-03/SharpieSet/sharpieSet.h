@@ -1,0 +1,10 @@
+#ifndef SHARPIESET_SHARPIESET_H
+#define SHARPIESET_SHARPIESET_H
+
+
+class SharpieSet {
+
+};
+
+
+#endif //SHARPIESET_SHARPIESET_H
