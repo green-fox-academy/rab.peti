@@ -14,22 +14,20 @@ int main(int argc, char* args[])
 
     bool found = false;
 
-    std::vector<int> winnerNumbers = {6,6,6,6,6,6};
+    std::vector<int> winnerNumbers(6,6);
     int counter = 0;
 
 
     while(!found)
     {
         diceSet.roll();
-        for (int i = 0; i < 6; ++i) {
-            if(diceSet.getCurrent() == winnerNumbers)
-            {
-                found = true;
-            }
+        if(diceSet.getCurrent() == winnerNumbers)
+        {
+            found = true;
         }
         counter++;
     }
-    std::cout << counter;
+    std::cout <<" I had to roll " << counter << " times.";
 
 
     return 0;
