@@ -1,0 +1,11 @@
+
+#ifndef GARDENAPPLICATION_GARDEN_H
+#define GARDENAPPLICATION_GARDEN_H
+
+
+class Garden {
+
+};
+
+
+#endif //GARDENAPPLICATION_GARDEN_H
