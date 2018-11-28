@@ -1,5 +1,7 @@
 #include <iostream>
 #include "animal.h"
+#include "farm.h"
+
 int main() {
     // Create an Animal class
     // Every animal has a hunger value, which is a whole number
@@ -8,20 +10,39 @@ int main() {
     // Every animal can eat() which decreases their hunger by one
     // Every animal can drink() which decreases their thirst by one
     // Every animal can play() which increases both by one
-    Animal animal1;
-    Animal animal2;
+    Farm farm;
 
-    std::cout << "Hunger: " << animal1.getHunger() << " | Thirst: " << animal1.getThirst() << std::endl;
-    std::cout << "Hunger2: " << animal2.getHunger() << " | Thirst2: " << animal2.getThirst() << std::endl;
+    farm.addAnimal(Animal());
+    farm.addAnimal(Animal());
 
-    for (int i = 0; i < 10; ++i) {
-        animal1.play();
+    std::cout << "Number of animals: " << farm.numberOfAnimals() << std::endl;
+
+    farm.searchedAnimal(0).eat();
+
+    for (int i = 0; i < farm.numberOfAnimals(); ++i) {
+        std::cout << "Animal number " << i + 1 << std::endl;
+        std::cout << "Hunger: " << farm.searchedAnimal(i).getHunger() << " | Thirst: " << farm.searchedAnimal(i).getThirst() << std::endl;
     }
-    std::cout << "Hunger: " << animal1.getHunger() << " | Thirst: " << animal1.getThirst() << std::endl;
-    for (int j = 0; j < 10; ++j) {
-        animal2.eat();
-        animal2.drink();
+
+    farm.slaughter();
+    std::cout << "Number of animals: " << farm.numberOfAnimals() << std::endl;
+    for (int i = 0; i < farm.numberOfAnimals(); ++i) {
+        std::cout << "Animal number " << i + 1 << std::endl;
+        std::cout << "Hunger: " << farm.searchedAnimal(i).getHunger() << " | Thirst: " << farm.searchedAnimal(i).getThirst() << std::endl;
     }
-    std::cout << "Hunger2: " << animal2.getHunger() << " | Thirst2: " << animal2.getThirst() << std::endl;
+    std::cout << "Number of animals: " << farm.numberOfAnimals() << std::endl;
+
+    for (int j = 0; j < 5; ++j) {
+        farm.breed();
+    }
+
+    std::cout << "Number of animals: " << farm.numberOfAnimals() << std::endl;
+
+    for (int i = 0; i < farm.numberOfAnimals(); ++i) {
+        std::cout << "Animal number " << i + 1 << std::endl;
+        std::cout << "Hunger: " << farm.searchedAnimal(i).getHunger() << " | Thirst: " << farm.searchedAnimal(i).getThirst() << std::endl;
+    }
+
+
     return 0;
 }

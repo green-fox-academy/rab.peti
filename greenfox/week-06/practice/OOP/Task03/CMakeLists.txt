@@ -3,4 +3,4 @@ project(Task03)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Task03 main.cpp animal.cpp animal.h)
+add_executable(Task03 main.cpp animal.cpp animal.h farm.cpp farm.h)

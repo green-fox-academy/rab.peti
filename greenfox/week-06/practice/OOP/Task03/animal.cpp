@@ -1,7 +1,3 @@
-//
-// Created by Peti on 2018. 11. 28..
-//
-
 #include "animal.h"
 
 Animal::Animal() {
