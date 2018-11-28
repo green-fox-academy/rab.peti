@@ -21,3 +21,7 @@ float Sharpie::getWidth() const {
 float Sharpie::getInkAmount() const {
     return _inkAmount;
 }
+
+bool Sharpie::usable() {
+    return getInkAmount() > 0;
+}

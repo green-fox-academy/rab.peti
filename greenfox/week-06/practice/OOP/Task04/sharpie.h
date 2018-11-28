@@ -10,6 +10,8 @@ public:
 
     const std::string &getColor() const;
 
+    bool usable();
+
     float getWidth() const;
 
     float getInkAmount() const;
