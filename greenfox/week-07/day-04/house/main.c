@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "house.h"
+#include "string.h"
 
 /*
 Create a struct that represents a House
@@ -19,14 +20,14 @@ int main() {
     house_t houses[2];
 
     house_t house1;
-    house1.address = "gyerebeutca5";
+    strcat(house1.address,"gyerebeutca5");
     house1.area = 200;
     house1.rooms = 10;
     house1.price = 60000;
     houses[0] = house1;
 
     house_t house2;
-    house2.address = "nemazazutca2";
+    strcat(house2.address, "nemazazutca2");
     house2.area = 300;
     house2.rooms = 8;
     house2.price = 130000;
