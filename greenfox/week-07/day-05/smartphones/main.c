@@ -66,17 +66,17 @@ char* get_oldest_phone(struct smartphone* array, int array_size, char* oldest);
 
 int get_screen_size_count(struct smartphone* array, int array_size, enum SCREEN_SIZE screen_size, int count);
 
+void price_calculator(struct smartphone* array, int array_size);
+
 int main() {
     char* path = "phones.txt";
     char oldest[256];
     struct smartphone phones[256];
     int lines = textReader(path,phones);
+    price_calculator(phones,lines);
     printf("The %s is the oldest device in the database\n", get_oldest_phone(phones,lines,oldest));
     printf("There are %d phones with BIG (>= 15 cm) screen size\n", get_screen_size_count(phones,lines,BIG,0));
     printf("There are %d phones with SMALL (< 12 cm) screen size\n", get_screen_size_count(phones,lines,SMALL,0));
-    //for (int j = 0; j < lines; ++j) {
-    //    printf("%s %d %s\n", phones[j].name, phones[j].year, getSCREEN_SIZE(phones,j));
-    //}
     return 0;
 }
 
@@ -98,6 +98,44 @@ int get_screen_size_count(struct smartphone* array, int array_size, enum SCREEN_
         }
     }
     return count;
+}
+
+void price_calculator(struct smartphone* array, int array_size){
+    int current_year = 2018;
+    FILE *file = fopen("prices.txt", "w");
+    if (file == NULL)
+    {
+        printf("Error opening file!\n");
+        exit(1);
+    }
+    int price = 300;
+    for (int i = 0; i < array_size; ++i) {
+        if(array[i].type == BIG) {
+            price *= 2;
+            if(current_year - array[i].year >= 5)
+                price -= 250;
+            else{
+                price -= (current_year - array[i].year) * 50;
+            }
+        }
+        else if(array[i].type == MEDIUM) {
+            price += 100;
+            if(current_year - array[i].year >= 5)
+                price -= 250;
+            else{
+                price -= (current_year - array[i].year) * 50;
+            }
+        }
+        else{
+            if(current_year - array[i].year >= 5)
+                price -= 250;
+            else{
+                price -= (current_year - array[i].year) * 50;
+            }
+        }
+        fprintf(file, "%s %d\n", array[i].name, price);
+        price = 300;
+    }
 }
 
 int textReader(char *path, struct smartphone* phones) {
