@@ -10,7 +10,7 @@ int main()
 {
     int* pointer = NULL;
     pointer = (int *)malloc(10 * (sizeof(int)));
-    int even = 1;
+    int even = 0;
     for (int i = 0; i < 10; ++i) {
         pointer[i] = even;
         even+=2;
