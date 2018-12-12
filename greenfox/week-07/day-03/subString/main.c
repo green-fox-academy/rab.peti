@@ -17,9 +17,7 @@ main()
     scanf("%s", input1);
     printf("Give me another string:\n");
     scanf("%s", input2);
-
     printf("%d", isSubString(input1,input2));
-
     return 0;
 }
 
