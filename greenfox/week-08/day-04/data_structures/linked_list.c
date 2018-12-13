@@ -23,15 +23,17 @@ void insert_at_the_beginning(node_t **head, int value) {
     node->value = value;
     node->next = *head;
     *head = node;
+}
 
-    //letrehozunk dinamikusan egy uj nodeot.
-    //az uj node valueja = value
-    //az uj node nextje = head->next
-    //head->next = az uj node
-    //node_t *node = malloc(sizeof(node_t));
-    //node->value = value;
-    //node->next = head->next;
-    //head->next = node;
+void insert_after(node_t *head, int value, int index){
+    node_t *insert = head;
+    for (int i = 0; i < index-1; ++i) {
+        insert = insert->next;
+    }
+    node_t *second = insert->next;
+    insert->next = malloc(sizeof(node_t));
+    insert->next->value = value;
+    insert->next->next = second;
 }
 
 void print_list(node_t *head) {
@@ -56,4 +58,8 @@ int size(node_t *head) {
         counter++;
     }
     return counter;
+}
+
+int is_empty(node_t* head){
+    return (head == NULL) ? (1) : (0);
 }

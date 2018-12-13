@@ -4,7 +4,6 @@
 
 int main()
 {
-    //node_t* head = malloc(sizeof(node_t));
     node_t* head = init_linked_list();
     head->value = 5;
 
@@ -41,8 +40,13 @@ int main()
     printf("--------------INSERT_AT_THE_END--------------------\n");
     insert_at_the_end(head, 7);
     print_list(head);
+    printf("--------------INSERT_AFTER--------------------\n");
+    insert_after(head, 0,2);
+    print_list(head);
     printf("--------------SIZE--------------------\n");
     printf("%d\n",size(head));
+    printf("--------------IS_EMPTY--------------------\n");
+    printf("%d\n",is_empty(head));
 
     return 0;
 }
