@@ -47,3 +47,13 @@ void print_list(node_t *head) {
         head = head->next;
     }
 }
+
+int size(node_t *head) {
+    int counter = 0;
+    while(head != NULL)
+    {
+        head = head->next;
+        counter++;
+    }
+    return counter;
+}

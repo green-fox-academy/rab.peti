@@ -4,14 +4,15 @@
 
 int main()
 {
-    node_t* head = malloc(sizeof(node_t));
+    //node_t* head = malloc(sizeof(node_t));
+    node_t* head = init_linked_list();
     head->value = 5;
 
-    node_t* node1 = malloc(sizeof(node_t));
+    node_t* node1 = init_linked_list();
     head->next = node1;
     node1->value = 8;
 
-    node_t* node2 = malloc(sizeof(node_t));
+    node_t* node2 = init_linked_list();
     node1->next = node2;
     node2->value = 6;
 
@@ -22,7 +23,6 @@ int main()
         if(p->value == 8){
             break;
         }
-
         p = p->next;
     }
 
@@ -41,7 +41,8 @@ int main()
     printf("--------------INSERT_AT_THE_END--------------------\n");
     insert_at_the_end(head, 7);
     print_list(head);
-    printf("----------------------------------\n");
+    printf("--------------SIZE--------------------\n");
+    printf("%d\n",size(head));
 
     return 0;
 }

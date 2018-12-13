@@ -14,5 +14,7 @@ void insert_at_the_beginning(node_t **head, int value);
 
 void print_list(node_t * head);
 
+int size(node_t *head);
+
 
 #endif //DATASTRUCTURES_LINKED_LIST_H
