@@ -9,6 +9,7 @@ node_t *init_linked_list() {
 
 void insert_at_the_end(node_t *head, int value) {
     node_t *insert = head;
+
     while (insert->next != NULL) {
         insert = insert->next;
     }
@@ -53,12 +54,6 @@ int delete(node_t ** head) {
 }
 
 void print_list(node_t *head) {
-    /*node_t * current = head;
-    *
-    *while (current != NULL) {
-    *    printf("%d\n", current->value);
-    *    current = current->next;
-    }*/
     while(head != NULL)
     {
         printf("%d\n", head->value);
