@@ -36,6 +36,22 @@ void insert_after(node_t *head, int value, int index){
     insert->next->next = second;
 }
 
+int delete(node_t ** head) {
+    int return_value = -1;
+    node_t * next_node = NULL;
+
+    if (*head == NULL) {
+        return -1;
+    }
+
+    next_node = (*head)->next;
+    return_value = (*head)->value;
+    free(*head);
+    *head = next_node;
+
+    return return_value;
+}
+
 void print_list(node_t *head) {
     /*node_t * current = head;
     *

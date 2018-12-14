@@ -43,9 +43,12 @@ int main()
     printf("--------------INSERT_AFTER--------------------\n");
     insert_after(head, 0,2);
     print_list(head);
+    printf("--------------DELETE--------------------\n");
+    delete(&head);
+    print_list(head);
     printf("--------------SIZE--------------------\n");
     printf("%d\n",size(head));
-    printf("--------------IS_EMPTY--------------------\n");
+    printf("--------------IS_EMPTY--------------------(0-false, 1-true)\n");
     printf("%d\n",is_empty(head));
 
     return 0;
