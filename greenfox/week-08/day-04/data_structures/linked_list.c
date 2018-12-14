@@ -72,5 +72,5 @@ int size(node_t *head) {
 }
 
 int is_empty(node_t* head){
-    return (head == NULL) ? (1) : (0);
+    return head == NULL;
 }
