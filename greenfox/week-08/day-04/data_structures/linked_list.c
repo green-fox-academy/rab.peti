@@ -20,37 +20,40 @@ void insert_at_the_end(node_t *head, int value) {
 }
 
 void insert_at_the_beginning(node_t **head, int value) {
-    node_t * node = malloc(sizeof(node_t));;
+    node_t * node = malloc(sizeof(node_t));
     node->value = value;
     node->next = *head;
     *head = node;
 }
 
 void insert_after(node_t *head, int value, int index){
-    node_t *insert = head;
-    for (int i = 0; i < index-1; ++i) {
-        insert = insert->next;
+    if(size(head) >= index && index > 0) {
+        node_t *insert = head;
+        for (int i = 0; i < index - 1; ++i) {
+            insert = insert->next;
+        }
+        node_t *second = insert->next;
+        insert->next = malloc(sizeof(node_t));
+        insert->next->value = value;
+        insert->next->next = second;
     }
-    node_t *second = insert->next;
-    insert->next = malloc(sizeof(node_t));
-    insert->next->value = value;
-    insert->next->next = second;
+    else{
+
+    }
 }
 
-int delete(node_t ** head) {
-    int return_value = -1;
-    node_t * next_node = NULL;
+node_t* delete(node_t ** head) {
+    node_t * new_head = NULL;
 
     if (*head == NULL) {
-        return -1;
+        return NULL;
     }
 
-    next_node = (*head)->next;
-    return_value = (*head)->value;
+    new_head = (*head)->next;
     free(*head);
-    *head = next_node;
+    *head = new_head;
 
-    return return_value;
+    return new_head;
 }
 
 void print_list(node_t *head) {
@@ -73,4 +76,7 @@ int size(node_t *head) {
 
 int is_empty(node_t* head){
     return head == NULL;
+}
+
+void deinit_list(node_t* head){
 }

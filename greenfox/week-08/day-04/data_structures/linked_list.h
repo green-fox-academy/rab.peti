@@ -14,13 +14,15 @@ void insert_at_the_beginning(node_t **head, int value);
 
 void insert_after(node_t *head, int value, int index);
 
-int delete(node_t **head);
+node_t* delete(node_t **head);
 
 void print_list(node_t * head);
 
 int size(node_t *head);
 
 int is_empty(node_t* head);
+
+void deinit_list(node_t* head);
 
 
 #endif //DATASTRUCTURES_LINKED_LIST_H
