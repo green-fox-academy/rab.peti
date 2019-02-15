@@ -1,1 +1,3 @@
-#These codes are written in C
+# These codes were written in C
+
+The tasks were taken from [HackerRank](https://www.hackerrank.com).
