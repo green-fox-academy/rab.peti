@@ -6,7 +6,7 @@
 
 int main()
 {
-	int n = 0;
+    int n = 0;
     int m = 0;
     float x = 0;
     float y = 0;
@@ -18,4 +18,3 @@ int main()
     
     return 0;
 }
-
