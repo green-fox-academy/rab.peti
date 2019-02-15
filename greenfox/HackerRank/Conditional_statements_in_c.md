@@ -47,11 +47,10 @@ int main()
       case 9 :
          printf("nine\n");
          break;
-        
+         
       default :
          printf("Greater than 9\n" );
    }
-
     return 0;
 }
 
