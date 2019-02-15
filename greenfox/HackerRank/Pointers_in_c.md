@@ -1,4 +1,5 @@
-```#include <stdio.h>
+```C
+#include <stdio.h>
 
 void update(int *a,int *b) {
     // Complete this function
