@@ -8,9 +8,9 @@ void calculate_the_maximum(int n, int k) {
     int ANDmax = 0;
     int ORmax = 0;
     int XORmax = 0;
+
     for(int i = 1;i < n;++i){
-        int j = i+1;
-        for(j;j < n+1;++j){
+        for(int j = i + 1;j < n + 1; ++j){
             if((i&j) > ANDmax && (i&j) < k)
                 ANDmax = i&j;
             if((i|j) > ORmax && (i|j) < k)
